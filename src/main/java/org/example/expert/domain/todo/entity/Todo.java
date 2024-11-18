@@ -11,6 +11,8 @@ import org.example.expert.domain.user.entity.User;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.querydsl.core.annotations.QueryProjection;
+
 @Getter
 @Entity
 @NoArgsConstructor
