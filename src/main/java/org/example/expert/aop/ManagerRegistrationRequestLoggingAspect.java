@@ -33,8 +33,7 @@ public class ManagerRegistrationRequestLoggingAspect {
 		ManagerSaveLogStatus status = ManagerSaveLogStatus.SUCCESS;
 		Object result = null;
 		try {
-			result = joinPoint.proceed();
-			return result;
+			return joinPoint.proceed();
 		} catch (Throwable e) {
 			log.error(e.getMessage());
 			status = ManagerSaveLogStatus.FAIL;
