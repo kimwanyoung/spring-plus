@@ -40,7 +40,7 @@ public class ManagerRegistrationRequestLoggingAspect {
 			status = ManagerSaveLogStatus.FAIL;
 			throw e;
 		} finally {
-			log.info("Admin Access Log - User Id: {}, Request Time: {}, Request URL: {}, Method: {}, Status: {}",
+			log.info("Manager Save Request Access Log - User Id: {}, Request Time: {}, Request URL: {}, Method: {}, Status: {}",
 				authUser.getId(), requestTime, requestUrl, joinPoint.getSignature().getName(), status.name());
 			managerLogService.saveLog(ManagerSaveLog.builder()
 				.requestUserId(authUser.getId())
